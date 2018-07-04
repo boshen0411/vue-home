@@ -1,0 +1,463 @@
+@import '~style/basic/param';
+
+.home_block {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 88px);
+}
+
+.amount_block {
+    padding: 20px 10px;
+    color: #fff;
+    background-color: $color-dark-blue;
+}
+
+.date_picker {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 14px;
+    .picker {
+        width: 180px;
+        height: 30px;
+        border-radius: 4px;
+        background-color: $color-deep-blue;
+        input {
+            height: 100%;
+            padding: 0 10px;
+            color: #fff;
+            border: none;
+            background: $color-deep-blue !important;
+            cursor: pointer;
+        }
+        i {
+            font-size: 16px;
+            color: #fff;
+        }
+    }
+}
+
+.amount {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    padding: 0 20px;
+    li {
+        display: inline-flex;
+        align-items: center;
+        width: 240px;
+        height: 80px;
+        padding: 0 20px;
+        font-size: 12px;
+        border: 1px $color-light-blue solid;
+        cursor: pointer;
+        &:nth-child(1):before {
+            content: url('../../assets/icons/equit_amount.png');
+        }
+        &:nth-child(2):before {
+            content: url('../../assets/icons/people_amount.png');
+        }
+        &:nth-child(3):before {
+            content: url('../../assets/icons/monitor_amount.png');
+        }
+        &:nth-child(4):before {
+            content: url('../../assets/icons/warn_amount.png');
+        }
+        &.active {
+            border-color: #fff;
+        }
+    }
+    .desc {
+        margin-left: 20px;
+    }
+    big {
+        display: block;
+        line-height: 30px;
+        font-size: 24px;
+    }
+    p {
+        display: flex;
+        align-items: center;
+    }
+    em {
+        display: inline-flex;
+        align-items: center;
+        margin-right: 1em;
+        font-style: normal;
+        &.green {
+            color: $color-green;
+            &:before {
+                border-bottom: 6px $color-green solid;
+            }
+        }
+        &.red {
+            color: $color-red;
+            &:before {
+                border-top: 6px $color-red solid;
+            }
+        }
+        &:before{
+            content: '';
+            display: block;
+            margin-right: 4px;
+            border-left: 5px transparent solid;
+            border-right: 5px transparent solid;
+        }
+    }
+}
+
+.statistics {
+    display: flex;
+    margin: 10px 0;
+    flex: 1;
+    min-height: 247px;
+}
+
+.tendency_block, .ranking_block  {
+    font-size: 14px;
+    background: $color-dark-blue;
+}
+
+.tendency_block {
+    width: 60.7%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ranking_block {
+    flex: 1;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    > div + div {
+        flex: 1;
+    }
+    .ranking_box {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        height: calc(100% - 40px);
+    }
+}
+
+.plate_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 16px;
+    border-bottom: 1px #003fa7 solid;
+    .picker {
+        width: 118px;
+        input {
+            height: 100%;
+            padding: 4px 10px;
+            font-size: 14px;
+            color: #fff;
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px $color-deep-blue solid;
+            background: transparent !important;
+            cursor: pointer;
+        }
+        i {
+            display: inline-flex;
+            align-items: center;
+            width: 20px;
+            &:before{
+                content: '';
+                border-left: 5px transparent solid;
+                border-right: 5px transparent solid;
+                border-top: 6px #fff solid;
+            }
+        }
+    }
+    .more {
+        font-size: 14px;
+        color: #41baff;
+        cursor: pointer;
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
+
+.tab {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    dl {
+        display: inline-flex;
+    }
+    dt:not(.active) {
+        cursor: pointer;
+        &:hover {
+            opacity: .8;
+        }
+    }
+    .type {
+        dt {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 30px;
+            border: 1px #003fa7 solid;
+            &:nth-child(2){
+                margin: 0 -1px;
+            }
+            &.active {
+                position: relative;
+                z-index: 1;
+                border-color: #41baff;
+            }
+        }
+    }
+    .period {
+        dt {
+            &:nth-child(2){
+                margin: 0 18px;
+            }
+            &.active {
+                color: #41baff;
+            }
+        }
+    }
+    .select {
+        position: relative;
+        width: 66px;
+        input {
+            height: 30px;
+            padding: 0 10px;
+            font-size: 12px;
+            color: #fff;
+            background: transparent;
+            border-color: #fff;
+        }
+        i {
+            color: #fff !important;
+        }
+    }
+}
+
+.chartCir {
+    display: flex;
+    > div {
+        flex: 1;
+    }
+}
+.tendency {
+    flex: 1;
+    display: flex;
+    padding: 10px 20px;
+    .chart {
+        flex: 1;
+    }
+    .period {
+        margin-bottom: 31px;
+        white-space: nowrap;
+        > dt {
+            display: inline;
+            font-size: 14px;
+            cursor: pointer;
+            & + dt {
+                margin-left: 14px;
+            }
+            &.active {
+                color: #41baff;
+            }
+        }
+    }
+    .legend {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 112px;
+        li {
+            display: flex;
+            align-items: center;
+            &:before {
+                content: '';
+                width: 10px;
+                height: 10px;
+                margin-right: 6px;
+                border-radius: 10px;
+            }
+            &.red:before {
+                background: #f87b47;
+            }
+            &.orange:before {
+                background: #ffbb4a;
+            }
+            &.green:before {
+                background: $color-green;
+            }
+        }
+    }
+    .analysis {
+        width: 72px;
+        height: 112px;
+        margin-left: 32px;
+        padding-top: 10px;
+        text-align: center;
+        border: solid 1px #41baff;
+        big {
+            font-size: 24px;
+        }
+        em {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            font-style: normal;
+            color: $color-red;
+            &:before {
+                content: '';
+                display: block;
+                margin-right: 4px;
+                border-top: 6px $color-red solid;
+                border-left: 5px transparent solid;
+                border-right: 5px transparent solid;
+            }
+        }
+    }
+}
+
+.ranking {
+    display: flex;
+    flex: 1;
+    padding: 0 20px;
+    .chart {
+        flex: 1;
+        & + div {
+            display: flex;
+            align-items: center;
+        }
+    }
+    .analysis {
+        width: 128px;
+        padding: 8px 0;
+        font-size: 12px;
+        border: 1px $color-light-blue solid;
+        dd, dt {
+            display: flex;
+        }
+        dd {
+            margin-bottom: 6px;
+            color: #ccc;
+        }
+        dt {
+            margin-top: 3px;
+        }
+        span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            &:after {
+                height: 15px;
+                margin-left: 3px;
+            }
+            &.red {
+                color: $color-red;
+                &:after {
+                    content: url('../../assets/icons/rank_dec.png');
+                }
+            }
+            &.green {
+                color: #14e4b6;
+                &:after {
+                    content: url('../../assets/icons/rank_inc.png');
+                }
+            }
+        }
+    }
+}
+
+.activity_block {
+    flex: 1;
+    background: $color-dark-blue;
+    display: flex;
+    flex-direction: column;
+    min-height: 247px;
+}
+
+.activity {
+    flex: 1;
+    display: flex;
+    padding: 10px 20px 20px;
+    height: 100%;
+    .chart {
+        flex: 1;
+    }
+    > section {
+        margin-left: 26px;
+        flex-shrink: 0;
+        width: 225px;
+    }
+    .period {
+        width: 100%;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        dt {
+            &:nth-child(2){
+                margin: 0 18px;
+            }
+            &.active {
+                position: relative;
+                z-index: 1;
+                border-color: #41baff;
+                color: #41baff;
+            }
+        }
+        & + div {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    .analysis {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 92px;
+        height: 112px;
+        padding: 10px;
+        line-height: 1;
+        text-align: center;
+        border: solid 1px #41baff;
+        span {
+            font-size: 12px;
+        }
+        big {
+            font-size: 24px;
+        }
+        em {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-style: normal;
+            &:before {
+                content: '';
+                display: block;
+                margin-right: 4px;
+                border-left: 5px transparent solid;
+                border-right: 5px transparent solid;
+            }
+            &.red {
+                color: $color-red;
+                &:before {
+                    border-top: 6px $color-red solid;
+                }
+            }
+            &.green {
+                color: #14e4b6;
+                &:before {
+                    border-bottom: 6px #14e4b6 solid;
+                }
+            }
+        }
+    }
+}

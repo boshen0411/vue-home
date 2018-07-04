@@ -1,0 +1,211 @@
+@import '~style/basic/param';
+$line: #0a3e93;
+.add_wrap {
+    .edit_info {
+        margin-bottom: 10px;
+        color: #fff;
+        background: $color-dark-blue; // height: calc(100vh - 86px);
+        h3 {
+            width: 120px;
+            height: 40px;
+            margin: 0 auto;
+            line-height: 40px;
+            text-align: center;
+            font-size: 16px;
+            border: 1px $color-light-blue solid;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+    }
+    .form {
+        padding: 13px 20px;
+        line-height: 1;
+        font-size: 0;
+        &>li {
+            display: inline-block;
+            width: 50%;
+            margin: 7px 0;
+            vertical-align: top;
+            font-size: 14px;
+        }
+        .warn {
+            input {
+                border-color: #FF4949;
+            }
+        }
+    }
+    .input {
+        width: 60%;
+        padding: 4px;
+        font-size: 14px;
+        color: #fff;
+        border-radius: 0;
+        background: transparent;
+        border-bottom: 1px $line solid;
+    }
+    .select {
+        width: 100px;
+        height: 24px;
+        .el-input__icon {
+            color: #fff;
+        }
+        input {
+            height: 100%;
+            color: #fff;
+            background: transparent;
+        }
+    }
+    .add {
+        display: inline-block;
+        width: 40px;
+        height: 24px;
+        line-height: 24px;
+        margin-left: 34px;
+        text-align: center;
+        font-size: 12px;
+        color: #fff;
+        border-radius: 4px;
+        background-color: $color-light-blue;
+        cursor: pointer;
+        input {
+            display: none;
+        }
+    }
+    .mark {
+        font-size: 0 !important;
+        span,
+        textarea {
+            display: inline-block;
+            font-size: 14px;
+        }
+        textarea {
+            width: calc(100% - 3em);
+            max-width: 500px;
+            height: 64px;
+            padding: 10px;
+            line-height: 1;
+            vertical-align: top;
+            resize: none;
+            outline: none;
+            color: #fff;
+            border: solid 1px #0a3e93;
+            background: transparent;
+        }
+    }
+    .button {
+        padding: 22px;
+        text-align: center;
+        button {
+            width: 100px;
+            height: 40px;
+            font-size: 16px;
+            color: #fff;
+            border-radius: 4px;
+            background-color: $color-light-blue;
+            cursor: pointer;
+        }
+        .cancel {
+            margin-right: 120px;
+            color: $color-light-blue;
+            border: solid 1px $color-light-blue;
+            background-color: transparent;
+        }
+    }
+    .picker {
+        width: 120px !important;
+        text-align: center;
+        i {
+            display: none !important;
+            font-size: 0 !important;
+        }
+        input {
+            padding: 0 !important;
+            text-align: center;
+            font-size: 14px;
+            color: #fff;
+            border: none;
+            border-radius: 0;
+            border-bottom: 1px $line solid;
+            background: transparent !important;
+        }
+    }
+    .cascader {
+        width: 180px;
+        input {
+            width: 100%;
+            // height: 40px;
+            margin: 0;
+            padding: 0 10px;
+            background-color: transparent!important;
+        }
+        span {
+            color: #fff !important;
+            line-height: 22px;
+            font-size: 12px;
+        }
+        i:before {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            margin-bottom: 1px;
+            border-top: 6px #fff solid;
+            border-left: 5px transparent solid;
+            border-right: 5px transparent solid;
+        }
+    }
+    // 上传部分
+    .upload_block {
+        padding: 28px 40px;
+        text-align: center;
+    }
+    .upload_area {
+        display: inline-block;
+        vertical-align: middle;
+        width: 360px;
+        height: 260px;
+        margin-right: 36px;
+        text-align: center;
+        border-radius: 4px;
+        color: #999;
+        background-color: #f9fafc;
+        border: solid 1px #c0ccda;
+        cursor: pointer;
+        label {
+            cursor: pointer;
+        }
+        i {
+            margin: 72px 0 16px;
+            font-size: 67px;
+            line-height: 50px;
+            color: $color-light-blue;
+        }
+    }
+    .upload_text {
+        margin-bottom: 10px;
+        font-size: 14px;
+        em {
+            font-style: normal;
+            color: $color-light-blue;
+        }
+    }
+    .upload_tip {
+        font-size: 12px;
+    }
+    .upload_list {
+        display: inline-block;
+        vertical-align: middle;
+        width: 360px;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #fff;
+        p {
+            margin-bottom: 5px;
+            text-align-last: justify;
+            span {
+                color: $color-red;
+                cursor: pointer;
+            }
+        }
+    }
+}

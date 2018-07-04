@@ -1,0 +1,288 @@
+@import '~style/basic/param';
+// 搜索区域样式
+.form_field {
+    min-width: 1024px;
+    padding: 20px;
+    font-size: 0;
+    background-color: $color-dark-blue;
+    ul {
+        max-width: 1600px;
+        color: #fff;
+        text-align: justify;
+        text-justify: inter-ideograph;
+        font-size: 0;
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 100%;
+            height: 0;
+        }
+    }
+    li {
+        display: inline-block;
+        vertical-align: middle;
+        &:nth-child(3) {
+            margin: 0 2%;
+        }
+        >p>span {
+            margin-right: 20px;
+        }
+    }
+    button {
+        display: block;
+        width: 80px;
+        height: 40px;
+        font-size: 18px;
+        border-radius: 4px;
+        cursor: pointer;
+        &:first-child {
+            color: #fff;
+            background-color: $color-light-blue;
+        }
+        &:last-child {
+            margin-top: 18px;
+            color: $color-light-blue;
+            background: transparent;
+            border: 1px $color-light-blue solid;
+        }
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
+
+.field,.date {
+    height: 40px;
+    font-size: 16px;
+}
+
+.field {
+    &:last-child {
+        margin-top: 20px;
+    }
+    input {
+        display: inline-block;
+        width: 240px;
+        height: 100%;
+        padding: 0 10px;
+        font-size: 14px;
+        color: #fff;
+        border-radius: 4px;
+        border: none;
+        background: $color-deep-blue;
+    }
+}
+
+.picker {
+    width: 118px !important;
+    input {
+        color: #fff;
+        border: none;
+        background: $color-deep-blue !important;
+        cursor: pointer;
+    }
+    i:before {
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-bottom: 1px;
+        border-top: 6px #fff solid;
+        border-left: 5px transparent solid;
+        border-right: 5px transparent solid;
+    }
+}
+
+.cascader {
+    width: 240px;
+    input {
+        width: 100%;
+        height: 40px;
+        margin: 0;
+        padding: 0 10px;
+        border: none;
+    }
+    span {
+        color: #fff !important;
+        line-height: 40px;
+    }
+    i:before {
+        content: '';
+        display: inline-block;
+        width: 0;
+        height: 0;
+        margin-bottom: 1px;
+        border-top: 6px #fff solid;
+        border-left: 5px transparent solid;
+        border-right: 5px transparent solid;
+    }
+}
+
+.select {
+    height: auto;
+    min-height: 40px;
+    font-size: 16px;
+    .el-select .el-tag {
+        color: #fff;
+    }
+    input {
+        width: 290px;
+    }
+}
+
+.upload,.avatar {
+    width: 86px;
+    height: 111px;
+    vertical-align: middle;
+}
+
+.upload {
+    display: inline-block;
+    background: url('../../../../assets/icons/add_icon2.png') no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+    input {
+        display: none;
+    }
+}
+
+.avatar {
+    margin-left: 10px;
+    object-fit: cover;
+}
+
+// 搜索结果样式
+.handle2,.result2 {
+    color: #fff;
+    background: $color-dark-blue;
+}
+
+.handle2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 13px 20px;
+    button {
+        min-width: 60px;
+        height: 30px;
+        padding: 0 8px;
+        font-size: 14px;
+        border-radius: 4px;
+        color: $color-light-blue;
+        background: transparent;
+        border: solid 1px $color-light-blue;
+        cursor: pointer;
+        &:hover {
+            opacity: .8;
+        }
+        &:last-child {
+            margin-left: 10px;
+        }
+        &.can {
+            border: none 0;
+            color: #fff;
+            background-color: $color-light-blue;
+        }
+    }
+    span {
+        display: inline-block;
+        font-size: 14px;
+    }
+    input {
+        border: none;
+        color: #fff;
+        background-color: $color-deep-blue!important;
+    }
+    em {
+        font-style: normal;
+        color: #41baff;
+    }
+}
+
+.rules {
+    display: block;
+    button {
+        color: #fff;
+        border: none;
+        background-color: $color-light-blue;
+    }
+}
+
+.result2 {
+    >section {
+        height: calc(100vh - 444px);
+    }
+    &.noFooter>section {
+        height: calc(100vh - 391px);
+    }
+    .checkbox {
+        position: relative;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        vertical-align: middle;
+        border: solid 1px #0158b4;
+        &:hover {
+            opacity: .9;
+        }
+        i {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        input {
+            display: none;
+            position: relative;
+            z-index: 9;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: pointer;
+            &:checked+i {
+                background: url('../../../../assets/icons/checked.png') no-repeat center;
+                background-size: contain;
+            }
+        }
+    }
+    img {
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: auto;
+        object-fit: cover;
+        background-color: #d8d8d8;
+    }
+    .img {
+        height: 50px;
+        padding-top: 5px;
+    }
+    span.operate {
+        display: inline-block;
+        vertical-align: middle;
+        cursor: pointer;
+        &+span {
+            margin-left: 10px;
+        }
+    }
+    span.ignore {
+        width: 20px;
+        height: 20px;
+        background: url('../../../../assets/icons/ignore.png') no-repeat center;
+    }
+    span.locus {
+        width: 24px;
+        height: 24px;
+        background: url('../../../../assets/icons/trajectory.png') no-repeat center;
+    }
+}
+
+.footer {
+    padding: 12px;
+    border-top: 1px #153f76 solid;
+    background: $color-dark-blue;
+}

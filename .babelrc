@@ -1,0 +1,30 @@
+{
+	"presets": [
+		[
+			"env",
+			{
+				"targets": {
+					"browsers": ["last 3 versions"]
+				},
+				"useBuiltIns": true
+			}
+		],
+		"stage-1"
+	],
+	"plugins": [
+		"syntax-dynamic-import", [
+			"transform-runtime",
+			{
+				"helpers": false,
+				"moduleName": "babel-runtime"
+			}
+		],
+		[
+			"component",
+			{
+				"libraryName": "element-ui",
+				"styleLibraryName": "theme-default"
+			}
+		]
+	]
+}

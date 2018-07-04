@@ -1,0 +1,15 @@
+/**
+ * @authors L
+ * @date    2017-05-20 15:41:17
+ * @desc    函數 + 模板
+ */
+
+@mixin clearfix {
+    &:before,&:after {
+        content:"";
+        display:table;
+    }
+    &:after{
+        clear:both;
+    }
+}

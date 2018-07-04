@@ -1,0 +1,176 @@
+@import '~style/basic/param';
+
+$royal-blue: #02285d;
+.role-detail {
+    > div,> section {
+        background: $color-dark-blue;
+    }
+}
+.topRow {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    > figure {
+        margin-right: 30px;
+        width: 100px;
+        height: 100px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    > div {
+        flex: 1;
+        > span {
+            display: block;
+            margin-bottom: 22px;
+            font-size: 16px;
+            color: #fff;
+        }
+        > p {
+            line-height: 20px;
+            font-size: 14px;
+            color: #999;
+            & + p {
+                margin-top: 11px;
+            }
+            > i {
+                font-style: normal;
+                color: #fff;
+            }
+            > span {
+                & + span::before {
+                    content: '、'
+                }
+            }
+        }
+        input {
+            background: $color-deep-blue;
+            width: 258px;
+            height: 40px;
+            padding: 0 10px;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #fff
+        }
+    }
+}
+.btns {
+    margin-bottom: 10px;
+    padding: 20px 0 0 20px;
+    font-size: 0;
+    > span {
+        display: inline-block;
+        width: 80px;
+        height: 40px;
+        border-radius: 4px;
+        border: 1px solid $color-light-blue;
+        background: $color-light-blue;
+        text-align: center;
+        line-height: 40px;
+        font-size: 16px;
+        color: #fff;
+        cursor: pointer;
+        user-select: none;
+        & + span {
+            margin-left: 16px;
+            background: transparent;
+            border-color: $color-light-blue;
+            color: $color-light-blue;
+        }
+    }
+}
+.sets-box {
+    margin-top: 10px;
+    font-size: 0;
+}
+.sets {
+    > dt {
+        height: 60px;
+        padding-left: 20px;
+        line-height: 60px;
+        font-size: 16px;
+        color: #fff;
+        cursor: pointer;
+        user-select: none;
+        &:before {
+            content: '';
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border: {
+                width: 7px;
+                style: solid;
+                color: transparent transparent transparent #fff;
+            }
+        }
+        > span, &:before {
+            vertical-align: middle;
+        }
+    }
+    > dd {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background: $royal-blue;
+        padding: 10px;
+        color: #333;
+        font-size: 14px;
+        ul {
+            width: 10em;
+            flex-shrink: 0;
+            li {
+                height: 30px;
+                padding-right: 10px;
+                border-right: 1px solid $color-deep-blue;
+                text-align: right;
+                line-height: 30px;
+                font-size: 14px;
+                color: #fff;
+                cursor: pointer;
+                user-select: none;
+                &.active {
+                    border-color: $color-light-blue;
+                }
+            }
+        }
+        > p {
+            display: inline-block;
+            height: 100%;
+            > span {
+                margin: 0 20px;
+                display: inline-block;
+                min-width: 10em;
+                line-height: 30px;
+                font-size: 12px;
+                color: #fff;
+                &:before {
+                    content: '';
+                    vertical-align: middle;
+                    margin-right: 9px;
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    border: 1px solid $color-light-blue;
+                }
+                &.active {
+                    &:before {
+                        background: url('~assets/icons/checked.png') no-repeat center;
+                        background-size: 14px 10px;
+                    }
+                }
+                > em {
+                    vertical-align: middle;
+                    font-style: normal;
+                }
+            }
+            &.edit {
+                > span {
+                    cursor: pointer;
+                    user-select: none;
+                }
+            }
+        }
+    }
+}

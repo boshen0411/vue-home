@@ -1,0 +1,200 @@
+@import '~style/basic/utils';
+@import '~style/basic/param';
+
+$deepBlue: #0158b4;
+
+.operate {
+    width: 100%;
+    position: relative;
+    @include clearfix;
+    display: inline-table;
+}
+
+.left {
+    padding: 20px 35px;
+    background: $color-dark-blue;
+    display: table-cell;
+    // width: calc(100% - 170px);
+    width: 100%;
+    > div {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.form {
+    width: calc(75% - 159px);
+    >div {
+        line-height: 40px;
+        width: 100%;
+        white-space: nowrap;
+        font-size: 0;
+        &+div {
+            margin-top: 30px;
+        }
+    }
+    label {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .head {
+        width: 4em;
+        padding-right: 1.4em;
+        box-sizing: content-box;
+        text-align: justify;
+        text-align-last: justify;
+        font-size: 16px;
+        color: #fff;
+        cursor: pointer;
+    }
+    .input {
+        width: calc(95% - 5.4em);
+        height: 40px;
+        padding-left: 10px;
+        border-radius: 3px;
+        background: $color-deep-blue;
+        font-size: 14px;
+        .icon {
+            margin-right: 10px;
+            width: 19.4px;
+            height: 19.4px;
+        }
+        input {
+            vertical-align: middle;
+            background: transparent;
+            width: calc(100% - 40px);
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+            color: #fff;
+        }
+    }
+}
+
+.global {
+    vertical-align: top !important;
+    margin-left: 2.4%;
+    height: 40px;
+    line-height: 40px;
+    label {
+        vertical-align: middle;
+        font-size: 12px;
+        line-height: 1;
+        color: #fff;
+        user-select: none;
+        cursor: pointer;
+    }
+    input {
+        display: none;
+    }
+    .icon-checkbox {
+        margin-right: 10px;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 1px solid $deepBlue;
+        &.checked {
+            background: url('~assets/icons/checked.png') no-repeat center;
+            background-size: 14px 10px;
+        }
+    }
+}
+
+.search {
+    margin-left: 3.7%;
+    width: 12%;
+    > div {
+        width: 100%;
+        height: 40px;
+        border-radius: 3px;
+        background: $color-light-blue;
+        text-align: center;
+        line-height: 40px;
+        font-size: 20px;
+        color: #fff;
+        cursor: pointer;
+        & + div {
+            margin-top: 18px;
+        }
+        &:hover {
+            background: $color-sky-blue;
+        }
+    }
+}
+
+.upload {
+    margin-left: 2.9%;
+    .btn {
+        width: 69px;
+        height: 69px;
+        border: 1px solid #fff;
+        border-radius: 10px;
+        cursor: pointer;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -0.5px;
+            margin-left: -19px;
+            display: inline-block;
+            width: 38px;
+            height: 1px;
+            background: #fff;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -19px;
+            margin-left: -0.5px;
+            display: inline-block;
+            width: 1px;
+            height: 38px;
+            background: #fff;
+        }
+    }
+    .img {
+        width: 85px;
+        height: 110px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+}
+
+.right {
+    padding-left: 10px;
+    display: table-cell;
+    vertical-align: middle;
+    > div {
+        width: 160px;
+        height: 160px;
+        border-radius: 3px;
+        text-align: center;
+        line-height: 160px;
+        cursor: pointer;
+        > span {
+            display: inline-block;
+            width: 4em;
+            text-align: justify;
+            text-align-last: justify;
+            font-size: 18px;
+        }
+    }
+    .add {
+        background: $deepBlue;
+        color: #fff;
+        user-select: none;
+        span {
+            margin-left: 10px;
+        }
+        &:hover {
+            background: $color-sky-blue;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+/*
+ * @Author: nooldey 
+ * @Date: 2017-09-05 09:31:54 
+ * @Last Modified by:   nooldey
+ * @Last Modified time: 2017-09-11 12:08:18
+ * @部分自定义组件的样式
+ */
+
+@import './_param.scss';
+
+.el-icon-caret-top {
+    -ms-transform: translateY(-50%) rotate(180deg);
+}
+
+.el-picker-panel {
+    box-shadow: none!important;
+}
+
+.el-time-panel {
+    .el-scrollbar__wrap {
+        box-sizing: content-box;
+    }
+}
+
+.el-dropdown-menu__item {
+    color: #333;
+    text-align: center;
+    min-width: 80px;
+    &:not(.is-disabled):hover {
+        color: #fff;
+        background: $color-light-blue;
+    }
+}
+
+.el-cascader__label {
+    line-height: 40px;
+    color: #fff!important;
+}
+
+.ts-button {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 5px 18px;
+    color: #fff;
+    background-color: $color-light-blue;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    &.info {
+        color: $color-light-blue;
+        background: transparent;
+        border: 1px solid $color-light-blue;
+    }
+    &:hover {
+        opacity: .8;
+    }
+}
